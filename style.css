@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scrollbar-width: thin;
+    scrollbar-color: #9a84d8 #1c1150;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: #333;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1c1150;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #9a84d8;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #8162b1;
+}
+
+header {
+    height: 68vh;
+    background: url(bg.png) no-repeat center center / cover;
+    background-attachment: fixed;
+    position: relative;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #9a84d8;
+    z-index: 0;
+    opacity: 0.3;
+}
+
+.logo {
+    font-size: 6rem;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+}
+
+h1 {
+    font-size: 3rem;
+    position: relative;
+    z-index: 2;
+}
+
+main {
+    transform: translate(9px, -98px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2rem;
+    gap: 1.5rem;
+}
+
+.box {
+    height: 243px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    width: 394px;
+    transition: transform 0.3s ease;
+}
+
+.box:hover {
+    transform: translate(10px, -10px);
+}
+
+h2 {
+    color: #9a84d8;
+    margin: 1rem 0;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #1c1150;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+a {
+    color: normal;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    h2 {
+        color: #9a84d8;
+        margin: 1rem 0;
+        font-size: 16px;
+    }
+    .logo {
+        font-size: 3rem;
+    }
+
+    header {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    main {
+        padding: 1rem;
+        flex-direction: column;
+        align-items: center;
+    }
+p{
+    font-size: 12px;
+}
+    .box {
+        height: auto;
+        width: 90%;
+        max-width: 394px;
+        padding: 1rem;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+}
+
+/* Further adjustments for very small screens */
+@media (max-width: 480px) {
+    .logo {
+        font-size: 2.5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .box {
+        padding: 0.5rem;
+    }
+}
