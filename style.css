@@ -34,11 +34,11 @@ body {
 
 header {
     height: 68vh;
-    background: url(bg.png) no-repeat center center / cover;
+    background: #1c1150;
     background-attachment: fixed;
     position: relative;
     color: white;
-    padding: 2rem;
+    padding: 3rem 2rem;
     text-align: center;
 }
 
@@ -52,6 +52,11 @@ header::before {
     background-color: #9a84d8;
     z-index: 0;
     opacity: 0.3;
+}
+
+header > p{
+    margin: 45px 45px;
+    font-size: 23px;
 }
 
 .logo {
@@ -112,6 +117,10 @@ a {
 }
 
 @media (max-width: 768px) {
+    header > p {
+        font-size: 12px;
+        margin: 36px 3px;
+    }
     h2 {
         color: #9a84d8;
         margin: 1rem 0;
